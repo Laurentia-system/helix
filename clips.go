@@ -9,6 +9,7 @@ type Clip struct {
 	CreatorID       string  `json:"creator_id"`
 	CreatorName     string  `json:"creator_name"`
 	Duration        float64 `json:"duration"`
+	VodOffset       float64 `json:"vod_offset"`
 	VideoID         string  `json:"video_id"`
 	GameID          string  `json:"game_id"`
 	Language        string  `json:"language"`
