@@ -321,7 +321,10 @@ func (c *Client) getBaseURL(path string) string {
 	return c.opts.APIBaseURL
 }
 
+var RequestCount int
+
 func (c *Client) doRequest(req *http.Request, resp *Response) error {
+	RequestCount += 1
 	c.setRequestHeaders(req)
 
 	rateLimitFunc := c.opts.RateLimitFunc
